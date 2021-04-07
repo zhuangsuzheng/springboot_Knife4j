@@ -18,13 +18,13 @@ public class Knife4jConfiguration {
         Docket docket=new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
                         //.title("swagger-bootstrap-ui-demo RESTful APIs")
-                        .description("# swagger-bootstrap-ui-demo RESTful APIs")
-                        .termsOfServiceUrl("http://www.xx.com/")
-                        .contact("xx@qq.com")
+                        .description("我的测试文档")
+                        .termsOfServiceUrl("http://www.yykjc.com/")
+                        .contact("1454144616@qq.com")
                         .version("1.0")
                         .build())
                 //分组名称
-                .groupName("2.X版本")
+                .groupName("2.1版本")
                 .select()
                 //这里指定Controller扫描包路径
                 .apis(RequestHandlerSelectors.basePackage("com.example.knife4j"))
@@ -33,23 +33,5 @@ public class Knife4jConfiguration {
         return docket;
     }
 
-    @Bean(value = "defaultApi1")
-    public Docket defaultApi1() {
-        Docket docket=new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(new ApiInfoBuilder()
-                        //.title("swagger-bootstrap-ui-demo RESTful APIs")
-                        .description("# swagger-bootstrap-ui-demo RESTful APIs")
-                        .termsOfServiceUrl("http://www.xx.com/")
-                        .contact("xx@qq.com")
-                        .version("1.0")
-                        .build())
-                //分组名称
-                .groupName("1.X版本")
-                .select()
-                //这里指定Controller扫描包路径
-                .apis(RequestHandlerSelectors.basePackage("com.example.knife4j"))
-                .paths(PathSelectors.any())
-                .build();
-        return docket;
 
 }
